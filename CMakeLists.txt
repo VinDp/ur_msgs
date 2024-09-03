@@ -20,6 +20,7 @@ set(srv_files
   srv/SetPayload.srv
   srv/SetSpeedSliderFraction.srv
   srv/SetIO.srv
+  srv/GetRobotSoftwareVersion.srv
 )
 
 if(BUILD_TESTING)
