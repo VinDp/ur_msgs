@@ -6,6 +6,10 @@ find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
+set(action_files
+  action/EnableFreedriveMode.action
+)
+
 set(msg_files
   msg/Analog.msg
   msg/Digital.msg
@@ -30,6 +34,7 @@ if(BUILD_TESTING)
 endif()
 
 rosidl_generate_interfaces(${PROJECT_NAME}
+  ${action_files}
   ${msg_files}
   ${srv_files}
   DEPENDENCIES builtin_interfaces geometry_msgs
